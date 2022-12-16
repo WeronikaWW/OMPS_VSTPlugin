@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFrameworks>net6.0</TargetFrameworks>
+    <AssemblyName>vstnet</AssemblyName>
+    <Version>2.0.2</Version>
+    <Authors>Marc Jacobi</Authors>
+    <Company>Jacobi Software</Company>
+    <Product>VST.NET</Product>
+    <Description>VST.NET 2 Command Line Interface</Description>
+    <Copyright>Copyright © 2008-2021 Jacobi Software</Copyright>
+    <PackageTags>vst vstnet cli</PackageTags>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <PackageLicenseExpression>LGPL-2.1-only</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/obiwanjacobi/vst.net</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/obiwanjacobi/vst.net</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageId>VST.NET2-CLI</PackageId>
+    <AssemblyVersion>2.0.3.0</AssemblyVersion>
+    <FileVersion>2.0.3.0</FileVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="Exists('../../../../../../_keyfile/Jacobi.snk')">
+    <SignAssembly>true</SignAssembly>
+    <DelaySign>false</DelaySign>
+    <AssemblyOriginatorKeyFile>../../../../../../_keyfile/Jacobi.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="runtimeconfig.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="runtimeconfig.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Xml.XDocument" Version="4.3.0" />
+  </ItemGroup>
+</Project>
